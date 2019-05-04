@@ -15,9 +15,8 @@ public class Sorter {
     			}
     		list.swap(i, minValue);
     		}
-    	} 
-    	return;
-    }
+    	}
+	}
 
     public static <T extends Comparable<T>> void bubbleSort(ISimpleList<T> list) {
 		
@@ -29,39 +28,38 @@ public class Sorter {
 			    }
 			 }
     	}
-		return;
-    }
+	}
 
-    public static <T extends Comparable<T>> void quickSort(ISimpleList<T> list, int low, int high) {
-    	
-    	int i = low;
-    	int j = high;
-    	
-    	int pivot = list[high];
-    	
-    	while (i <= j) {
-    		
-    		while (list[i] < pivot) {
-    			i++;
-    		}
-    		
-    		while (list[high] < pivot) {
-    			j--;
-    		}
-    		if (i <= j) {
-    			list.swap(i, j);
-    			i++;
-    			j--;
-    		}
-    	}
-    	
-    	if (low < j)
-    		quickSort(list, low, j);
-    	if (i < high)
-    		quickSort(list, i,high);
-    }
+//    public static <T extends Comparable<T>> void quickSort(ISimpleList<T> list, int low, int high) {
+//
+//    	int i = low;
+//    	int j = high;
+//
+//    	int pivot = list[high];
+//
+//    	while (i <= j) {
+//
+//    		while (list[i] < pivot) {
+//    			i++;
+//    		}
+//
+//    		while (list[high] < pivot) {
+//    			j--;
+//    		}
+//    		if (i <= j) {
+//    			list.swap(i, j);
+//    			i++;
+//    			j--;
+//    		}
+//    	}
+//
+//    	if (low < j)
+//    		quickSort(list, low, j);
+//    	if (i < high)
+//    		quickSort(list, i,high);
+//    }
 
-    static void qSort (ISimpleList<T> list) {
-    	quickSort(list, 0, list.size -1);
-    }
+//    static void qSort (ISimpleList<T> list) {
+//    	quickSort(list, 0, list.size -1);
+//    }
 }
